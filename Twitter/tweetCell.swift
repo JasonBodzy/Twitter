@@ -17,16 +17,30 @@ class tweetCell: UITableViewCell {
     @IBOutlet weak var retweetButton: UIButton!
     @IBOutlet weak var favButton: UIButton!
     
-    @IBAction func favoriteTweet(_ sender: Any) {
+    var favorited: Bool = false
+    var tweetId: Int = -1
+
+    @IBAction func button(_ sender: Any) {
+        print("hey")
+    
+    }
+    
+    
+    
+
+    @IBAction func favTweet(_ sender: Any) {
+        print("Favorite!!")
         let toBeFavorited = !favorited
         
         if (toBeFavorited) {
+            setFavorite(true)
             TwitterAPICaller.client?.favoriteTweet(tweetId: tweetId, success: {
                 self.setFavorite(true)
             }, failure: { (error) in
                 print("Error favoriting tweet \(error)")
             })
         } else {
+            setFavorite(false)
             TwitterAPICaller.client?.unFavoriteTweet(tweetId: tweetId, success: {
                 self.setFavorite(false)
             }, failure: { (error) in
@@ -35,8 +49,8 @@ class tweetCell: UITableViewCell {
         }
     }
     
-    
     @IBAction func retweet(_ sender: Any) {
+        print("Retweet!!!")
         TwitterAPICaller.client?.retweet(tweetId: tweetId, success: {
             self.setRetweeted(true)
         }, failure: { (error) in
@@ -54,18 +68,18 @@ class tweetCell: UITableViewCell {
         }
     }
 
-    var favorited: Bool = false
-    var tweetId: Int = -1
-    
     func setFavorite(_ isFavorited:Bool) {
         favorited = isFavorited
-        if (!favorited) {
+        if (favorited) {
             favButton.setImage(UIImage(named: "favor-icon-red"), for: UIControl.State.normal)
+            print("Favotire")
         } else {
+            print("non favorite \(favorited)")
             favButton.setImage(UIImage(named: "favor-icon"), for: UIControl.State.normal)
         }
     }
-        override func awakeFromNib() {
+    
+    override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
