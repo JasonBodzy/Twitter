@@ -52,24 +52,20 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BG-YF-XxS" userLabel="favButton">
-                                            <rect key="frame" x="320" y="109" width="30" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="30" id="fwO-6O-fcd"/>
-                                                <constraint firstAttribute="height" constant="30" id="ySF-9K-nb6"/>
-                                            </constraints>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BG-YF-XxS" userLabel="favButton">
+                                            <rect key="frame" x="64" y="90" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="favor-icon"/>
                                             <connections>
                                                 <action selector="favoriteTweet:" destination="hDb-Ez-ICs" eventType="touchUpInside" id="6VZ-fn-OCt"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGD-kx-lz9" userLabel="retweetButton">
-                                            <rect key="frame" x="285" y="109" width="30" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="30" id="QHb-fu-IC9"/>
-                                                <constraint firstAttribute="height" constant="30" id="XCV-gh-GiC"/>
-                                            </constraints>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGD-kx-lz9" userLabel="retweetButton">
+                                            <rect key="frame" x="5" y="90" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="retweet-icon" title=""/>
                                             <connections>
@@ -80,15 +76,10 @@
                                     <constraints>
                                         <constraint firstItem="zPc-0l-N7l" firstAttribute="top" secondItem="Phj-2N-sCR" secondAttribute="bottom" constant="8" id="0ug-Xl-94B"/>
                                         <constraint firstItem="zPc-0l-N7l" firstAttribute="leading" secondItem="E7J-c4-i3j" secondAttribute="leading" constant="15" id="EUC-kY-0D3"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="7BG-YF-XxS" secondAttribute="bottom" constant="10" id="JNX-oy-gXZ"/>
-                                        <constraint firstAttribute="bottom" secondItem="nGD-kx-lz9" secondAttribute="bottom" constant="10" id="QTu-k3-fJi"/>
                                         <constraint firstItem="jso-YC-zAN" firstAttribute="top" secondItem="E7J-c4-i3j" secondAttribute="top" id="TIy-js-uuj"/>
-                                        <constraint firstItem="7BG-YF-XxS" firstAttribute="leading" secondItem="nGD-kx-lz9" secondAttribute="trailing" constant="10" id="gfG-mI-ey3"/>
                                         <constraint firstItem="Phj-2N-sCR" firstAttribute="top" secondItem="E7J-c4-i3j" secondAttribute="top" id="gti-Vg-Noj"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="7BG-YF-XxS" secondAttribute="trailing" constant="10" id="kfp-yV-Ebd"/>
                                         <constraint firstAttribute="trailing" secondItem="jso-YC-zAN" secondAttribute="trailing" constant="15" id="nZZ-lN-ybE"/>
                                         <constraint firstItem="Phj-2N-sCR" firstAttribute="leading" secondItem="E7J-c4-i3j" secondAttribute="leading" constant="15" id="rgj-Jn-Haa"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="7BG-YF-XxS" secondAttribute="bottom" constant="10" id="uZE-X2-ji9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="twitterCell"/>
